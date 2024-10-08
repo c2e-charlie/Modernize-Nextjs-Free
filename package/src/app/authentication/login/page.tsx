@@ -44,9 +44,14 @@ const Login2 = () => {
               elevation={9}
               sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
             >
-              <Box display="flex" alignItems="center" justifyContent="center">
+              <Stack
+                flexDirection={"column"}
+                alignItems="center"
+                justifyContent="center"
+              >
                 <Logo />
-              </Box>
+                <Typography />
+              </Stack>
               <AuthLogin
                 subtext={
                   <Typography

@@ -7,6 +7,7 @@ import {
   Button,
   Stack,
   Checkbox,
+  TextField,
 } from "@mui/material";
 import Link from "next/link";
 
@@ -29,54 +30,26 @@ const AuthLogin = ({ title, subtitle, subtext }: loginType) => (
     {subtext}
 
     <Stack>
-      <Box>
-        <Typography
-          variant="subtitle1"
-          fontWeight={600}
-          component="label"
-          htmlFor="username"
-          mb="5px"
-        >
-          Username
-        </Typography>
-        <CustomTextField variant="outlined" fullWidth />
-      </Box>
-      <Box mt="25px">
-        <Typography
-          variant="subtitle1"
-          fontWeight={600}
-          component="label"
-          htmlFor="password"
-          mb="5px"
-        >
-          Password
-        </Typography>
-        <CustomTextField type="password" variant="outlined" fullWidth />
-      </Box>
-      <Stack
-        justifyContent="space-between"
-        direction="row"
-        alignItems="center"
-        my={2}
-      >
-        <FormGroup>
-          <FormControlLabel
-            control={<Checkbox defaultChecked />}
-            label="Remeber this Device"
-          />
-        </FormGroup>
-        <Typography
-          component={Link}
-          href="/"
-          fontWeight="500"
-          sx={{
-            textDecoration: "none",
-            color: "primary.main",
-          }}
-        >
-          Forgot Password ?
-        </Typography>
-      </Stack>
+      <TextField
+        fullWidth
+        id="outlined-basic"
+        label="Account"
+        variant="outlined"
+      />
+      <Box mt={2} />
+      <TextField
+        fullWidth
+        id="outlined-basic"
+        label="Password"
+        variant="outlined"
+      />
+
+      <FormGroup>
+        <FormControlLabel
+          control={<Checkbox defaultChecked />}
+          label="아이디 저장"
+        />
+      </FormGroup>
     </Stack>
     <Box>
       <Button
